@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/angular.min.js"></script>
+</head>
+<body>
+
+	<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+		<!--<select ng-model="select" ng-options="x for x in names" id=""></select>-->
+	<!--</div>-->
+
+	
+	
+	
+	<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+		<!--<select name="select" id="">-->
+			<!--<option ng-repeat="i in names">{{ i }}</option>-->
+		<!--</select>-->
+	<!--</div>-->
+
+
+	
+	<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+		<!--<select ng-model="selectSites">-->
+			<!--<option ng-repeat="i in sites" value="{{i.name}}">{{ i.name }}</option>-->
+		<!--</select>-->
+		<!--<h2>{{ selectSites }}</h2>-->
+	<!--</div>-->
+
+
+
+	<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+		<!--<select ng-model="selectSites" ng-options="x.site for x in sites"></select>-->
+		<!--<h1>{{ selectSites.site }}</h1>-->
+		<!--<h2>{{ selectSites.url }}</h2>-->
+	<!--</div>-->
+
+
+	<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+		<!--<select ng-model="selectSites" ng-options="x for (x,y) in sites"></select>-->
+		<!--<h2>{{ selectSites }}</h2>-->
+	<!--</div>-->
+
+
+
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<select ng-model="selectCard" ng-options="x for (x,y) in cards"></select>
+			<h3>{{ selectCard.name }}</h3>
+			<h2>{{ selectCard.age }}</h2>
+			<h1>{{ selectCard.sex }}</h1>
+		</div>
+
+
+
+	<script>
+
+
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.cards = {
+				card01 : {name:'鸭子',age:'24',sex:'男'},
+				card02 : {name:'大侠',age:'22',sex:'女'},
+				card03 : {name:'瞎子',age:'23',sex:'男'}
+			}
+		})
+
+
+//		var app = angular.module('myApp',[]);
+//		app.controller('myCtrl',function($scope){
+//			$scope.sites = {
+//				site01 : '鸭子',
+//				site02 : '大侠',
+//				site03 : '瞎子'
+//			}
+//		})
+
+
+//		var app = angular.module('myApp',[]);
+//		app.controller('myCtrl',function($scope){
+//			$scope.sites = [
+//				{site:'鸭子',url:'aaaaaaaaaaaaa'},
+//				{site:'大侠',url:'bbbbbbbbbbbbb'},
+//				{site:'瞎子',url:'ccccccccccccc'}
+//			]
+//		})
+
+
+
+//		var app = angular.module('myApp',[]);
+//		app.controller('myCtrl',function($scope){
+//			$scope.sites = [
+//				{name:'呵呵',title:'aaaaaaaaaaaaaaa'},
+//				{name:'哈哈',title:'bbbbbbbbbbbbbbb'},
+//				{name:'嘻嘻',title:'ccccccccccccccc'}
+//			]
+//		})
+
+
+//	var app = angular.module('myApp',[]);
+//	app.controller('myCtrl',function($scope){
+//		$scope.names = ['鸭子','大侠','亚索','瞎子'];
+//	})
+
+
+
+//	var app = angular.module('myApp',[]);
+//	app.controller('myCtrl',function($scope){
+//		$scope.names = ['鸭子','大侠','妩媚','打撒'];
+//	})
+
+
+
+
+</script>
+</body>
+</html>

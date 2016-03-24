@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/angular.min.js"></script>
+</head>
+<body>
+
+
+
+	<!--<div ng-app="">-->
+		<!--<p>名字：<input type="text" ng-model="name"/></p>-->
+		<!--<h1>你好 {{name}}</h1>-->
+	<!--</div>-->
+	    <!--ng-app 指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的"所有者"。-->
+		<!--ng-model 指令把输入域的值绑定到应用程序变量 name。-->
+		<!--ng-bind 指令把应用程序变量 name 绑定到某个段落的 innerHTML。-->
+
+
+
+
+
+	<!--<div ng-app="" ng-init="firstName='鸭子'">-->
+		<!--ng-init 指令初始化 AngularJS 应用程序变量。-->
+		<!--<p>姓名为 <span ng-bind="firstName"></span></p>-->
+
+	<!--</div>-->
+
+
+
+
+
+
+	<!--<div data-ng-app="" data-ng-init="firstName='鸭子'">-->
+		<!--HTML5 允许扩展的（自制的）属性，以 data- 开头。-->
+		<!--AngularJS 属性以 ng- 开头，但是您可以使用 data-ng- 来让网页对 HTML5 有效。-->
+		<!--<p>姓名为 <span data-ng-bind="firstName"></span></p>-->
+
+	<!--</div>-->
+
+
+
+
+	<!--<div ng-app="">-->
+		<!--<span>我的第一个表达式： {{ 5 + 5 }}</span>-->
+	<!--</div>-->
+
+
+
+
+	<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+
+		<!--名: <input type="text" ng-model="firstName"><br>-->
+		<!--姓: <input type="text" ng-model="lastName"><br>-->
+		<!--<br>-->
+		<!--姓名: {{firstName + " " + lastName}}-->
+
+	<!--</div>-->
+
+
+
+
+	<!--<div ng-app="" ng-init="quantity=1;cost=5">-->
+
+		<!--<p>总价： {{ quantity * cost }}</p>-->
+
+	<!--</div>-->
+
+
+
+
+
+	<!--<div ng-app="" ng-init="quantity=1;cost=5">-->
+		<!--<p>总价: <span ng-bind="quantity * cost"></span></p>-->
+	<!--</div>-->
+
+
+
+
+	<!--<div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">-->
+
+		<!--<p>姓为 {{ person.lastName }}</p>-->
+
+	<!--</div>-->
+
+
+
+
+
+
+	<!--<div ng-app="" ng-init = "person = { firstName : '颜' , lastName : '瑞' }">-->
+	<!--<p>{{ person.firstName + '' + person.lastName }}</p>-->
+	<!--</div>-->
+
+
+
+
+
+
+	<!--<div ng-app="" ng-init = " person = { firstName: '颜' , lastName: '瑞' } ">-->
+		<!--<p>姓名：<span ng-bind = "person.firstName + ' ' +person.lastName"></span></p>-->
+	<!--</div>-->
+
+
+
+
+
+
+	<!--<div ng-app = "" ng-init = " point = [ 1,2,3,4,5,6 ] " >-->
+		<!--<p> {{ point[2] }} </p>-->
+	<!--</div>-->
+
+
+
+
+
+	<!--<div ng-app = "" ng-init = " point = [ 1,2,3,4,5,6,7 ] ">-->
+		<!--<p>第三个值为：<span ng-bind = " point[2] "></span></p>-->
+	<!--</div>-->
+
+
+
+
+
+
+	<!--<div ng-app="" ng-init = " firstName = '' ">-->
+		<!--<p>尝试输入自己的姓名：</p>-->
+		<!--<p><input type="text" ng-model=" firstName "  /></p>-->
+		<!--<p>{{ firstName }}</p>-->
+	<!--</div>-->
+
+
+
+
+
+
+	<!--<div ng-app="">-->
+		<!--<p>尝试输入自己的姓名：</p>-->
+		<!--<p><input type="text" ng-model = "firstName" /></p>-->
+		<!--<p ng-bind = " firstName "></p>-->
+	<!--</div>-->
+
+
+
+
+	<!--<div ng-app="" ng-init=" quantity='' ; price=''  ">-->
+		<!--<h2>价格计算：</h2>-->
+		<!--数量：<input type="text" ng-model = "quantity" />-->
+		<!--单价：<input type="text" ng-model = "price" />-->
+		<!--<p>{{ quantity * price }}</p>-->
+	<!--</div>-->
+
+
+
+
+
+	<!--<div ng-app="" ng-init=" quantity=1;price=5 ">-->
+		<!--<h2>价格计算：</h2>-->
+		<!--数量：<input type="text" ng-model = " quantity " />-->
+		<!--单价：<input type="text" ng-model = " price " />-->
+		<!--<p ng-bind = " quantity * price "></p>-->
+	<!--</div>-->
+
+
+
+
+
+	<!--<div ng-app="" ng-init = " names = ['kit','huf','mgr','tea'] ">-->
+		<!--<p>使用 ng-repeat 来循环数组</p>-->
+		<!--<ul>-->
+			<!--<li ng-repeat = " i in names ">-->
+				<!--{{ i }}-->
+			<!--</li>-->
+		<!--</ul>-->
+	<!--</div>-->
+
+
+
+
+	<!--<div ng-app="" ng-init = " names =-->
+		<!--[-->
+			<!--{name:'鸭子',age:12},-->
+			<!--{name:'猴子',age:13},-->
+			<!--{name:'鸽子',age:14}-->
+		<!--]-->
+	 <!--">-->
+
+		<!--<p>循环对象</p>-->
+		<!--<ul>-->
+			<!--<li ng-repeat = " i in names ">-->
+				<!--{{ i.name + ':' + i.age }}-->
+			<!--</li>-->
+		<!--</ul>-->
+
+	<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script>
+
+
+			//AngularJS 模块
+	//		var app = angular.module('myApp', []);
+
+			//AngularJS 控制器
+	//		app.controller('myCtrl', function($scope) {
+	//			$scope.firstName= "John";
+	//			$scope.lastName= "Doe";
+	//		});
+
+
+		</script>
+
+</body>
+</html>

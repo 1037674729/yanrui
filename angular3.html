@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/angular.min.js"></script>
+</head>
+<body>
+
+<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+	<!--姓名：<input type="text" ng-model="name" />-->
+	<!--你输入了：<span>{{ name }}</span>-->
+
+<!--</div>-->
+
+
+
+
+
+
+
+<!--<form ng-app="" name="myForm">-->
+	<!--Email:-->
+	<!--<input type="email" name="myAddress" ng-model="text">-->
+	<!--<span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱地址</span>-->
+<!--</form>-->
+
+
+
+
+
+
+
+<!--<form ng-app="" name="myForm" ng-init="myText = 'test@runoob.com'">-->
+
+	<!--Email:-->
+	<!--<input type="email" name="myAddress" ng-model="myText" required>-->
+	<!--<p>编辑邮箱地址，查看状态的改变。</p>-->
+	<!--<h1>状态</h1>-->
+	<!--<p>Valid: {{myForm.myAddress.$valid}} (如果输入的值是合法的则为 true)。</p>-->
+	<!--<p>Dirty: {{myForm.myAddress.$dirty}} (如果值改变则为 true)。</p>-->
+	<!--<p>Touched: {{myForm.myAddress.$touched}} (如果通过触屏点击则为 true)。</p>-->
+
+<!--</form>-->
+
+
+
+
+
+<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+
+	<!--<h1>{{ content }}</h1>-->
+
+<!--</div>-->
+
+
+
+
+     <!--<div ng-app="myApp" ng-controller="myCtrl">-->
+	     <!--<input type="text" ng-model="name" />-->
+	     <!--<h2>{{ name }}</h2>-->
+     <!--</div>-->
+
+
+
+     <!--<div ng-app="myApp" ng-controller="myCtrl">-->
+	     <!--<h1>{{ lastName }}</h1>-->
+	     <!--<ul>-->
+		     <!--<li ng-repeat=" x in names ">{{ x }} {{ laseName }}</li>-->
+	     <!--</ul>-->
+     <!--</div>-->
+
+
+	 <!--<div ng-app="myApp" ng-controller="myCtrl">-->
+
+		<!--<h1>姓氏为 {{lastname}} 家族成员:</h1>-->
+
+		<!--<ul>-->
+			<!--<li ng-repeat="x in names">{{x}} {{lastname}}</li>-->
+		<!--</ul>-->
+
+	<!--</div>-->
+
+
+
+
+
+		<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+			<!--姓：<input type="text" ng-model="firstName" />-->
+			<!--名：<input type="text" ng-model="lastName" />-->
+			<!--<br/>-->
+			<!--{{fullName()}}-->
+		<!--</div>-->
+
+
+
+		<!--<div ng-app="myApp" ng-controller="personCtrl">-->
+
+			<!--名: <input type="text" ng-model="firstName"><br>-->
+			<!--姓: <input type="text" ng-model="lastName"><br>-->
+			<!--<br>-->
+			<!--姓名: {{fullName()}}-->
+
+		<!--</div>-->
+
+
+
+
+		<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+			<!--<h2>{{ name | uppercase }}</h2>-->
+		<!--</div>-->
+
+
+
+
+
+		<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+			<!--数量：<input type="text" ng-model="num" />-->
+			<!--单价：<input type="text" ng-model="price" />-->
+
+			<!--总价：<h2>{{ num * price | currency }}</h2>-->
+		<!--</div>-->
+
+
+
+			<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+				<!--<h2>{{url}}</h2>-->
+			<!--</div>-->
+
+
+
+		<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+
+			<!--<p>欢迎信息:</p>-->
+
+			<!--<h1>{{myWelcome}}</h1>-->
+
+		<!--</div>-->
+
+
+		<!--<div ng-app="myApp" ng-controller="myCtrl">-->
+			<!--<h2>{{ myHeader }}</h2>-->
+		<!--</div>-->
+
+
+
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<h2>{{ theTime }}</h2>
+		</div>
+
+
+
+<script>
+
+	var app = angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope,$interval){
+		$scope.theTime = new Date().toLocaleTimeString();
+		$interval(function(){
+			$scope.theTime = new Date().toLocaleTimeString();
+		},1000)
+	})
+
+
+
+//	var app = angular.module('myApp',[]);
+//	app.controller('myCtrl',function($scope,$timeout){
+//		$scope.myHeader = '鸭子';
+//		$timeout(function(){
+//			$scope.myHeader = '大侠';
+//		},2000)
+//	})
+
+
+
+//	var app = angular.module('myApp', []);
+//	app.controller('myCtrl', function($scope, $http) {
+//		$http.get("welcome.htm").then(function (response) {
+//			$scope.myWelcome = response.data;
+//		});
+//	});
+
+
+//	var app = angular.module('myApp',[]);
+//	app.controller('myCtrl',function($scope,$location){
+//		$scope.url = $location.absUrl();
+//	})
+
+
+//	var app = angular.module("myApp",[]);
+//	app.controller("myCtrl",function($scope){
+//		$scope.num = 1;
+//		$scope.price = 0.9;
+//	})
+
+
+//	var app = angular.module("myApp",[]);
+//	app.controller("myCtrl",function($scope){
+//		$scope.name = 'yanrui';
+//	})
+
+//	var app = angular.module("myApp",[]);
+//	app.controller("myCtrl",function($scope){
+//		$scope.firstName = '颜';
+//		$scope.lastName = '瑞';
+//		$scope.fullName = function(){
+//			return $scope.firstName + "" + $scope.lastName;
+//		}
+//	})
+
+
+//	var app = angular.module('myApp', []);
+//	app.controller('personCtrl', function($scope) {
+//		$scope.firstName = "John";
+//		$scope.lastName = "Doe";
+//		$scope.fullName = function() {
+//			return $scope.firstName + " " + $scope.lastName;
+//		}
+//	});
+
+
+//	var app = angular.module('myApp', []);
+//
+//	app.controller('myCtrl', function($scope, $rootScope) {
+//		$scope.names = ["Emil", "Tobias", "Linus"];
+//		$rootScope.lastname = "Refsnes";
+//	});
+
+
+
+//	var app = angular.module("myApp",[]);
+//	app.controller("myCtrl",function($scope,$rootScope){
+//		$scope.names = ['雅女士','黄金时代看','v大'];
+//		$rootScope.lastName = '发你快';
+//	})
+//
+
+//	var app = angular.module("myApp",[]);
+//	app.controller("myCtrl",function($scope){
+//		$scope.name = '闫瑞欧';
+//	})
+
+
+//	var app = angular.module("myApp",[]);
+//	app.controller("myCtrl",function($scope){
+//		$scope.content = '颜瑞';
+//	})
+
+
+//	var app = angular.module("myApp",[]);
+//	app.controller("myCtrl",function ($scope){
+//		$scope.name = "颜瑞";
+//	})
+
+
+
+</script>
+</body>
+</html>

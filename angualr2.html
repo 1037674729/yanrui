@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<runoob-directive></runoob-directive>
+<runoob-directive></runoob-directive>
+
+
+<div runoob-directive></div>
+
+
+
+<script>
+
+	var app = angular.module("myApp",[]);
+
+	app.directive("runoobDirective",function() {
+		return {
+			restrict : "A",
+			template : "<h1>中国人</h1>"
+		}
+	})
+
+
+</script>
+</body>
+</html>
